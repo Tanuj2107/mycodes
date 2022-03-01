@@ -1,0 +1,33 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mediaqueries";
+@import "../../../assets/styles/mixins";
+.progress-cont {
+    height: 7px;
+    width: 100%;
+    border-radius: 100px;
+    background: #d7d7d8;
+    position: relative;
+    .progress {
+        width: 0;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border-radius: 100px;
+        background: #932771;
+        transition: 0.5s all;
+    }
+    .aira-background-orange {
+        background: $orange;
+    }
+    .aira-background-red {
+        background: $red;
+    }
+    .aira-background-green {
+        background: $green;
+    }
+    .aira-background-purple {
+        background: #932771;
+    }
+}

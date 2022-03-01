@@ -1,0 +1,98 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mediaqueries";
+@import "../../../../assets/styles/mixins";
+.aira-tabview {
+    .aira-tags {
+        list-style: none;
+        flex-wrap: wrap;
+        li {
+            background-color: #e9d4e3;
+            padding: 7px 12px;
+            margin: 0 6px 6px 0;
+            @include rounded();
+            color: $primaryFontColor;
+            font-family: $fsalbert-bold;
+            font-size: 12px;
+        }
+    }
+}
+
+.ner_checkbox_list {
+    padding-left: 20px;
+    .aira-checkbox {
+        padding-right: 20px;
+        padding-left: 0;
+        margin: 0;
+        @include ipadScreen {
+            padding: 5px 25px 5px 0px;
+        }
+        input {
+            margin: 3px 3px 0px 0;
+        }
+        i {
+            color: $darkBlue;
+            margin: 0 4px 0;
+            position: relative;
+            top: 4px;
+            font-size: 22px;
+        }
+        label {
+            color: $primaryFontColor;
+            font-family: $fsalbert-bold;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.tags_list {
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        >li {
+            margin: 0 0 15px 0;
+            &:last-child {
+                margin: 0;
+            }
+            p {
+                font-family: $fsalbert-bold;
+                background: #f2f1f7;
+                @include rounded(2px);
+                padding: 7px 10px;
+                text-transform: uppercase;
+                margin: 0 0 10px;
+                color: $grey;
+            }
+            >ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                counter-reset: tagslist;
+                >li {
+                    font-family: $fsalbert-bold;
+                    background: #e9d4e3;
+                    @include rounded();
+                    padding: 7px 12px;
+                    margin: 5px 0;
+                    display: table;
+                    list-style-type: decimal;
+                    margin-left: 15px;
+                    position: relative;
+                    &::before {
+                        counter-increment: tagslist;
+                        content: counter(tagslist)".";
+                        position: absolute;
+                        left: -15px;
+                        top: 5px;
+                        bottom: 0;
+                        margin: auto;
+                        font-family: $fsalbert-regular;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {}

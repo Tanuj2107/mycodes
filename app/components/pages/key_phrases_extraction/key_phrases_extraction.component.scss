@@ -1,0 +1,47 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.aira-tabview {
+    .aira-tags {
+        list-style: none;
+        flex-wrap: wrap;
+        li {
+            background-color: #e9d4e3;
+            padding: 7px 12px;
+            margin: 0 6px 6px 0;
+            @include rounded();
+            color: $primaryFontColor;
+            font-family: $fsalbert-bold;
+            font-size: 12px;
+        }
+    }
+    .merge_btn {
+        padding-top: 15px;
+        span {
+            font-family: $fsalbert-bold;
+            padding-left: 10px;
+            font-size: 14px;
+            color: $primaryFontColor;
+        }
+    }
+    #chart {
+        width: 100%;
+        max-width: 1400px;
+        background-color: $white;
+        text-align: center;
+        margin: 10px auto 0;
+        height: 500px;
+        overflow: auto;
+        @include rounded();
+        svg {
+            g {
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #chart {
+        height: 400px !important;
+    }
+}

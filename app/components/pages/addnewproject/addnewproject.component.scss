@@ -1,0 +1,9 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.dm-fileupload {
+    .dm-fileupload__header {
+        .dm-fileupload__download {
+            top: -70px;
+        }
+    }
+}

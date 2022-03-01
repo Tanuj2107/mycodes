@@ -1,0 +1,74 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mediaqueries";
+@import "../../../../assets/styles/mixins";
+.patent_analysis {
+    .patent_formfield {
+        margin-bottom: 15px;
+        button {
+            margin-left: 15px;
+        }
+        .sortby_container {
+            @include mobileScreen {
+                width: 100%;
+            }
+        }
+        .search_box {
+            @include mobileScreen {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            input {
+                @include mobileScreen {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        >.d-flex {
+            @include mobileScreen {
+                flex-direction: column;
+                align-items: self-start;
+            }
+        }
+    }
+    .table_wrapper {
+        table {
+            margin: 0;
+            tr {
+                .table_progress {
+                    width: 20%;
+                }
+                td {
+                    position: relative;
+                    &:first-child {
+                        cursor: pointer;
+                        &:hover {
+                            color: #000;
+                            @include transition(all, 0.5s, ease-in-out);
+                        }
+                    }
+                    &:last-child {
+                        border-left: 1px solid #C9C4D7;
+                    }
+                    span {
+                        display: block;
+                        padding: 0 0 2px 0;
+                    }
+                    .btn_action {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        i {
+                            color: $darkBlue;
+                            font-size: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

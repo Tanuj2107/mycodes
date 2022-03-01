@@ -1,0 +1,39 @@
+<ngx-light-carousel [options]="options1" [data]="products" class="wrapper c-accent"
+	style="display: block;">
+	<section ngx-light-carousel-container class="content">
+		<article ngx-light-carousel-item *ngFor="let product of products; let i = index">
+			<div class="item cursor-pointer">
+				<div class="product">
+					<a href="{{product.url}}">
+						<img class="w-100" src="{{product.image}}">
+                    </a>
+				</div>
+                <div class="slide_caption">{{product.caption}}</div>
+			</div>
+		</article>
+		<ng-template #infiniteContainer></ng-template>
+	</section>
+
+	<ng-template #carouselContent let-product let-i="index">
+		<article>
+			<div class="item cursor-pointer">
+				<div class="product">
+					<a href="{{product.url}}">
+						<img class="w-100" src="{{product.image}}">
+                    </a>
+				</div>
+                <div class="slide_caption">{{product.caption}}</div>
+			</div>
+		</article>
+	</ng-template>
+
+	<ng-template #carouselPrev>
+		<div class="click-area">
+		</div>
+	</ng-template>
+	<ng-template #carouselNext>
+		<div class="click-area">
+		</div>
+	</ng-template>
+
+</ngx-light-carousel>

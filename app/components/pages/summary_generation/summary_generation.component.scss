@@ -1,0 +1,88 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mediaqueries";
+@import "../../../../assets/styles/mixins";
+:host {
+     ::ng-deep .range_slider {
+        display: flex;
+        flex-wrap: wrap;
+        .p-element {
+            width: 70%;
+            padding-right: 15px;
+            .p-sliders {
+                background-color: #bbb9c1;
+                background-image: none;
+                border: none;
+                @include rounded();
+                color: white;
+                .p-slider-range {
+                    @include rounded();
+                    background: #014c9a;
+                }
+                .p-slider-handle {
+                    background: #b0d0f2;
+                    border-color: #014c9a;
+                }
+            }
+        }
+    }
+}
+
+.aira-tabview {
+    .paste_articlelink {
+        padding-top: 10px;
+        .left_articlelink {
+            max-width: 430px;
+            width: 100%;
+        }
+    }
+    .or_linkbreak {
+        p {
+            color: #757379;
+            font-size: 14px;
+            padding-top: 15px;
+        }
+    }
+}
+
+.tab_content_top {
+    .number_summary {
+        max-width: 300px;
+        width: 100%;
+        margin-left: 20px;
+        padding: 0 10px;
+        p {
+            width: 30%;
+            margin: -11px 0 0 0;
+            padding: 0;
+            font-family: $fsalbert-bold;
+            font-size: 15px;
+        }
+        .language_title {
+            margin-bottom: 19px;
+        }
+    }
+}
+
+.aira-editable_contentarea {
+    &.summary_generation {
+        .left_group {
+            .editable_text {
+                min-height: 415px;
+                @include ipadScreen {
+                    min-height: 235px;
+                }
+            }
+        }
+        .right_group {
+            .textarea_wrapper {
+                margin: 0 0 20px 0;
+            }
+            .editable_text {
+                min-height: 170px;
+                @include ipadScreen {
+                    min-height: 235px;
+                }
+            }
+        }
+    }
+}

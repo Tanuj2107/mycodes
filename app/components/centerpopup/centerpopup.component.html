@@ -1,0 +1,12 @@
+<div class="custom_overlay" [class]="popupDisplay" #popup>
+    <div class="custom_popup">
+        <a href="javascript:void(0)" (click)="closePopup(popup)">
+            <i class="icon-cross"></i>
+        </a>
+        <i class="icon-tick-circle"></i>
+        <i class="icon-cancel display_none"></i>
+        <h4>Success</h4>
+        <p>We have received your data. We will notify you through email once data is ready</p>
+        <button class="btn aira-btn-fill" (click)="closePopup(popup)">Ok</button>
+    </div>
+</div>

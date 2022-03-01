@@ -1,0 +1,71 @@
+<div class="header_wrapper">
+    <div class="container">
+        <header class="header d-flex flex-wrap justify-content-center">
+            <a routerLink="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img src="./assets/images/Logo.png" alt="AIRA">
+            </a>
+
+            <div class="hamburger_menu aira-mobile">
+                <a href="javascript:void(0)" (click)="mobileMenu(menu)">
+                    <i></i>
+                </a>
+            </div>
+
+            <div class="aira-desktop aira-menubar d-flex" #menu>
+                <ul class="nav">
+                    <li class="nav-item aira-megamenu" dropdown>
+                        <a href="javascript:void(0)" class="nav-link aira-arrow active" dropdownToggle aria-controls="dropdown-basic">AIRA Studio</a>
+                        <ul id="dropdown-basic" class="dropdown-menu" *dropdownMenu>
+                            <li class="nav_list" dropdown>
+                                <a class="dropdown-item aira-arrow" dropdownToggle href="javascript:void(0)">
+                                    <i class="icon-engines"></i> Engines</a>
+                                <ul *dropdownMenu>
+                                    <li><a routerLink="/phrase-cloud-generation" routerLinkActive="active">Phrase Cloud Generation</a></li>
+                                    <li><a routerLink="/machine-translation" routerLinkActive="active">Machine Translation</a></li>
+                                    <li><a routerLink="/ner" routerLinkActive="active">NER</a></li>
+                                    <li><a routerLink="/news-classification" routerLinkActive="active">News Classification</a></li>
+                                    <li><a routerLink="/sentiment-analysis" routerLinkActive="active">Sentiment Analysis</a></li>
+                                    <li><a routerLink="/summary-generation" routerLinkActive="active">Summary Generation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="nav_list">
+                                        <a href="javascript:void(0)"> <i class="icon-artificial-intelligence"></i> AutoML</a>
+                                    </li>
+                                    <li class="nav_list">
+                                        <a href="javascript:void(0)"><i class="icon-design"></i> Design Workflow</a>
+                                    </li>
+                                    <li class="nav_list">
+                                        <a routerLink="/patent-analysis" routerLinkActive="active"> <i class="icon-patent"></i> Patent Analysis</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item"><a routerLink="/my-work" class="nav-link">My Work</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">API Gateway</a></li>
+                </ul>
+                <div class="dropdown text-end user_details" dropdown>
+                    <a dropdownToggle href="javascript:void(0)" class="d-flex link-dark text-decoration-none aira-arrow align-items-center" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/images/User-icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <span class="current_user">
+                <span class="user_name">John Smith</span>
+                        <span class="user_bio">Admin</span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" *dropdownMenu>
+                        <li><a class="dropdown-item" href="javascript:void(0)">New project...</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Settings</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>

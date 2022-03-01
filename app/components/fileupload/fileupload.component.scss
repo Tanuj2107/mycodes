@@ -1,0 +1,167 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+.dm-fileupload {
+    padding: 0px 0px;
+    .dm-fileupload__header {
+        position: relative;
+        .dm-fileupload__heading {
+            width: 100%;
+            padding-right: 200px;
+            h6 {
+                margin-bottom: 5px;
+            }
+            p {
+                color: #595959;
+                font-size: 13px;
+            }
+        }
+        .dm-fileupload__download {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 0;
+            display: flex;
+            align-items: center;
+            &.withoutContent {
+                top: -70px;
+            }
+        }
+    }
+    .dm-upload__container {
+        width: 100%;
+        padding: 5px 10px 20px;
+        text-align: center;
+        border: 3px dashed #c0bbce;
+        position: relative;
+        margin: 0 auto;
+        @include rounded();
+        background: #d0cae0;
+        &.fileover {
+            border: 3px dashed #8777af;
+        }
+        .fileupload_icon {
+            font-size: 100px;
+            color: #978aba;
+        }
+        input {
+            opacity: 0;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        label {
+            text-decoration: underline;
+            cursor: pointer;
+            position: relative;
+            z-index: 9;
+        }
+        h3 {
+            font-size: 20px;
+            color: #48464f;
+            padding: 0;
+            margin: 0;
+        }
+        span {
+            color: #7a787e;
+            font-size: 14px;
+        }
+    }
+    .files-list {
+        margin-top: 10px;
+        .single-file {
+            display: flex;
+            padding: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            @include rounded();
+            background: $white;
+            margin-bottom: 10px;
+            flex-grow: 1;
+            color: #fdfdfe;
+            i {
+                color: #715fa1;
+                &.icon-xlsx-file-format {
+                    font-size: 44px;
+                }
+                &.icon-delete {
+                    font-size: 21px;
+                }
+            }
+            img.delete {
+                margin-left: 0.5rem;
+                cursor: pointer;
+                align-self: flex-end;
+            }
+            .name {
+                font-size: 14px;
+                font-weight: 500;
+                color: #353f4a;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .size {
+                font-size: 12px;
+                font-weight: 500;
+                color: #a4a4a4;
+                margin: 0;
+                margin-bottom: 0.25rem;
+            }
+            .info {
+                width: calc(100% - 90px);
+                .file_info {
+                    padding: 0 5px;
+                    width: 15%;
+                    position: relative;
+                }
+                .progressbar {
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .dm-fileupload {
+        .dm-fileupload__header {
+            .dm-fileupload__heading {
+                padding: 0;
+            }
+            .dm-fileupload__download {
+                position: static;
+                margin: 5px 0 15px;
+            }
+        }
+        .files-list {
+            .single-file {
+                .info {
+                    .file_info {
+                        width: 40%;
+                    }
+                    .progressbar {
+                        width: 58%;
+                    }
+                }
+            }
+        }
+        .dm-upload__container {
+            .fileupload_icon {
+                max-width: 80px;
+            }
+            h3 {
+                font-size: 14px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.banner_area {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #063869;
+    padding: 25px 0;
+    .banner_content {
+        h1 {
+            color: #fff;
+            font-size: 1.75em;
+            font-weight: normal;
+            font-family: "FSAlbert-Regular", Arial, Helvetica, sans-serif;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #fff;
+            font-size: 0.9em;
+            margin-bottom: 16px;
+            opacity: 0.7;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            font-family: 'FSAlbert-Light';
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner_area {
+        .banner_content {
+            h1 {
+                color: #fff;
+                font-size: 1.25em;
+                font-weight: normal;
+            }
+            p {
+                font-size: 0.8em;
+                line-height: 1.2;
+            }
+        }
+    }
+}

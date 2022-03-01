@@ -1,0 +1,114 @@
+.news-classification-section .file_uploader{
+    background: #eae7f1;
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+.classification_result{
+    background-color: #eae7f1;
+    padding: 20px;
+    border-radius: 7px;
+    padding: 27px 20px;
+    border-radius: 7px;
+    h5 {
+        font-size: 1.05rem;
+        .download_results {
+            float: right;
+            background: #ddcade;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            margin-top: -12px;
+            font-weight: bold;
+            color: #932771;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            .icon-download {
+                font-weight: bold;
+            }
+        }
+        :hover{
+            color: #ddcade; 
+            background: #932771;
+        }
+    }
+    .classification_result_col {
+        text-align: center;
+        .image_wrapper img {
+            background: #fff;
+            padding: 15px;
+            border-radius: 7px;
+            margin-bottom: 25px;
+        }
+    }
+}
+.slider_group {
+    text-align: center;
+    padding-top: 15px;
+    background-image: url(/assets/images/slider-bg.png);
+    background-repeat: no-repeat;
+    background-position: left 9px top 2px;
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+    .carousel-item {
+        padding: 0 20px;
+        img {
+            background: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 1px 20px #ccc;
+            height: 170px;
+            object-fit: contain;
+        }
+    }
+}
+.chart_group {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    .chart_row1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chart_row1_col1 {
+        width: 25%;
+        >div{
+            min-height: 300px;
+        }
+    }    
+    .chart_row1_col2 {
+        width: 75%;
+        >div{
+            min-height: 300px;
+        }
+    }
+    .chart_row2{
+        width: 100%;
+        .chart_row2_col1{
+            position: relative;
+            padding-top: 30px;
+        }
+    }
+    h6.chart_title{
+        text-align: center;
+        color: #595959;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .chart_group .chart_row1_col1,
+    .chart_group .chart_row1_col2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

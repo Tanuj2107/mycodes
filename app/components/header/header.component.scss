@@ -1,0 +1,250 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+header.header {
+    padding: 5px 0px;
+    position: relative;
+    .hamburger_menu {
+        position: absolute;
+        top: 13px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        a {
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 0;
+            i {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-color: $black;
+                    width: 100%;
+                    height: 2px;
+                    top: 16px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                &:after {
+                    top: -16px;
+                }
+            }
+        }
+    }
+    .nav {
+        .aira-megamenu {
+            >ul {
+                &.show {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                &.dropdown-menu {
+                    max-width: 550px;
+                    width: 550%;
+                    padding: 5px 15px;
+                    right: -7% !important;
+                    left: inherit !important;
+                    box-shadow: 0px 0px 8px #ccc;
+                    @include rounded();
+                    &:before,
+                    &:after {
+                        content: "";
+                        @include arrow(top, 12px, #fff);
+                        position: absolute;
+                        top: -12px;
+                        right: 16.3px;
+                        z-index: 2;
+                    }
+                    &:after {
+                        @include arrow(top, 14px, #ccc);
+                        z-index: 1;
+                        top: -13.3px;
+                        right: 14px;
+                    }
+                    >li {
+                        width: 48.5%;
+                    }
+                    li {
+                        &.nav_list {
+                            margin: 5px 0;
+                            i {
+                                position: relative;
+                                top: 2px;
+                                margin-right: 2px;
+                            }
+                            svg {
+                                width: 18px;
+                                fill: $primaryFontColor;
+                                margin-right: 5px;
+                            }
+                            &.open.show {
+                                ul {
+                                    display: block;
+                                    padding: 5px 10px;
+                                }
+                                .aira-arrow {
+                                    &:after {
+                                        @include transform(rotate(-45deg))
+                                    }
+                                }
+                            }
+                            ul {
+                                display: none;
+                            }
+                            .aira-arrow {
+                                &:after {
+                                    right: 10px;
+                                }
+                            }
+                            >a {
+                                background: #f4f2f8;
+                                @include rounded();
+                                display: block;
+                                font-family: $fsalbert-bold;
+                                text-decoration: none;
+                                color: $primaryFontColor;
+                                @include transition();
+                                padding: 6px 10px;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $black;
+                                }
+                            }
+                            >ul {
+                                background: $white;
+                                li {
+                                    a {
+                                        color: $darkBlue;
+                                        padding: 5px 0px;
+                                        text-decoration: none;
+                                        display: block;
+                                        @include transition();
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: $royalBlue;
+                                            padding-left: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav-item {
+            position: relative;
+            padding: 0 15px;
+            .nav-link {
+                color: $primaryFontColor;
+                font-family: 'FSAlbert-Bold';
+                letter-spacing: 0.5px;
+                padding: 8px 0;
+                &.aira-arrow {
+                    padding-right: 16px;
+                }
+            }
+            .nav-dropdown {
+                position: absolute;
+                background: #fff;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
+    }
+    .user_details {
+        >a {
+            height: 100%;
+            padding: 0 15px;
+            &:after {
+                border-color: $grey;
+            }
+        }
+        .user_name {
+            font-family: "FSAlbert-Bold";
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        .current_user {
+            text-align: left;
+            margin-left: 12px;
+            >span {
+                display: block;
+                line-height: normal;
+            }
+            .user_bio {
+                font-size: 11px;
+                text-transform: uppercase;
+            }
+        }
+        img.rounded-circle {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    header.header {
+        .aira-menubar {
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            background: $white;
+            z-index: 99;
+            top: 100%;
+            padding: 10px 10px 10px 10px;
+            @include rounded();
+            border: 1px solid $grey;
+            opacity: 0;
+            visibility: hidden;
+            .nav {
+                flex-direction: column;
+                .aira-megamenu {
+                    >ul {
+                        &.dropdown-menu {
+                            flex-direction: column;
+                            max-width: 100%;
+                            width: 100%;
+                            left: 0 !important;
+                            right: 0 !important;
+                            position: static;
+                            box-shadow: none;
+                            border: 0;
+                            &:after,
+                            &:before {
+                                display: none;
+                            }
+                            li {
+                                width: 100%;
+                                &.nav_list {
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

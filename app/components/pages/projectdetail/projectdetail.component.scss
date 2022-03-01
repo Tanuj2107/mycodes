@@ -1,0 +1,162 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mediaqueries";
+@import "../../../../assets/styles/mixins";
+.project_details {
+    .title_backbtn {
+        h3 {
+            color: $primaryFontColor;
+            font-size: 18px;
+            span {
+                display: block;
+                color: $grey;
+                font-size: 12px;
+                margin-top: 3px;
+            }
+        }
+    }
+    .training_datatable {
+        .publication_number {
+            cursor: pointer;
+            &:hover {
+                color: #000;
+                @include transition(all, 0.5s, ease-in-out);
+            }
+        }
+    }
+    .tag_training_data {
+        margin-bottom: 15px;
+        h3 {
+            color: $primaryFontColor;
+            font-size: 18px;
+            margin: 0;
+            @include mobileScreen {
+                margin-bottom: 10px;
+            }
+        }
+        .tag_training_field {
+            a[class^="icon-"] {
+                font-size: 18px;
+                text-decoration: none;
+                font-weight: bold;
+                background: $white;
+                padding: 6px;
+                @include rounded();
+                color: $btnColor;
+                border: 1px solid $lightGrey;
+                margin-left: 10px;
+            }
+            .aira-checkbox {
+                margin-top: 5px;
+                &.border_training_field {
+                    padding-right: 10px;
+                    border-right: 1px solid $lightGrey;
+                }
+                &:first-child {
+                    @include mobileScreen {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        @include mobileScreen {
+            flex-direction: column;
+        }
+    }
+    .product_guid {
+        background: $white;
+        padding: 15px;
+        border: 1px solid $lightGrey;
+        @include rounded();
+        margin: 0px 0 20px 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            &.d-flex {
+                @include mobileScreen {
+                    flex-direction: column;
+                }
+            }
+            li {
+                margin-right: 15px;
+                color: $black;
+                font-size: 14px;
+                width: 22%;
+                @include mobileScreen {
+                    width: 100%;
+                }
+                h6 {
+                    color: $grey;
+                    margin-bottom: 5px;
+                }
+                span {
+                    display: block;
+                    &.complete_required {
+                        font-size: 12px;
+                    }
+                }
+                span[class^="aira-"] {
+                    margin-bottom: 3px;
+                }
+                @include mobileScreen {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .aira-switch-btn {
+        p-inputswitch {
+            display: block;
+            +span {
+                display: block;
+                color: $grey;
+                font-size: 12px;
+            }
+        }
+    }
+    .table_wrapper {
+        table {
+            margin: 0;
+            tr {
+                th {
+                    white-space: nowrap;
+                }
+                td {
+                    padding: 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+.remaining_patents {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: $white;
+    padding: 20px 0;
+    z-index: 9;
+    border-top: 1px solid $lightGrey;
+    .manual_tagging {
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        color: $grey;
+        font-size: 14px;
+        @include mobileScreen {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+app-footer {
+    padding-bottom: 86px;
+    display: block;
+    @include mobileScreen {
+        padding-bottom: 140px;
+    }
+}

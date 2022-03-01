@@ -1,0 +1,46 @@
+<div class="dm-fileupload">
+    <div class="dm-fileupload__header">
+        <div class="dm-fileupload__heading">
+            <h6>{{uploadHeading}}</h6>
+            <p>{{uploadPara}}</p>
+        </div>
+        <div class="dm-fileupload__download" [ngClass]="{'withoutContent':(uploadHeading && uploadPara) == ''}">
+            <a href="javascript:void(0)" class="aira-btn">Download Template</a>
+        </div>
+    </div>
+    <div class="dm-upload__container" appFileupload (fileDropped)="onFileDropped($event)">
+        <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($any($event).target.files)" />
+        <i class="icon-cloud-computing fileupload_icon"></i>
+        <h3>Drag File here or <label for="fileDropRef">browse</label> </h3>
+        <span>Supports xlsx, xls, docx and txt files only</span>
+
+    </div>
+    <div class="files-list">
+        <div class="single-file" *ngFor="let file of files; let i = index">
+            <i class="icon-xlsx-file-format"></i>
+
+
+            <div class="info d-flex">
+                <div class="file_info">
+                    <h4 class="name custom_tooltip" [attr.data-title]="file?.name">
+                        {{ file?.name }}
+                    </h4>
+                    <p class="size">
+                        {{ formatBytes(file?.size) }}
+                    </p>
+                </div>
+
+
+                <div class="progressbar">
+                    <app-progressbar [progress]="file?.progress"></app-progressbar>
+                </div>
+
+            </div>
+
+
+            <svg class="delete" width="25" alt="file" (click)="deleteFile(i)" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="_20-Cancel" data-name="20-Cancel"><path d="m16 30a14 14 0 1 1 14-14 14 14 0 0 1 -14 14zm0-26a12 12 0 1 0 12 12 12 12 0 0 0 -12-12zm1.41 12 5.3-5.29a1 1 0 0 0 -1.42-1.42l-5.29 5.3-5.29-5.3a1 1 0 0 0 -1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></svg>
+            <!-- <img src="assets/images/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i)"> -->
+            <i class="icon-delete display_none"></i>
+        </div>
+    </div>
+</div>

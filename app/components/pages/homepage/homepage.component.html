@@ -1,0 +1,213 @@
+<!-- Header section Component -->
+<div class="header_wrapper homepage_header">
+    <div class="container">
+        <header class="header d-flex flex-wrap justify-content-center">
+            <a routerLink="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark  header_logo text-decoration-none">
+               <h1>AIRA</h1>
+            </a>
+
+            <div class="hamburger_menu aira-mobile">
+                <a href="javascript:void(0)" (click)="mobileMenu(menu)">
+                    <i></i>
+                </a>
+            </div>
+
+            <div class="aira-desktop aira-menubar d-flex" #menu>
+                <ul class="nav">
+                    <li class="nav-item aira-megamenu" dropdown>
+                        <a href="javascript:void(0)" class="nav-link aira-arrow active" dropdownToggle aria-controls="dropdown-basic">AIRA Studio</a>
+                        <ul id="dropdown-basic" class="dropdown-menu" *dropdownMenu>
+                            <li class="nav_list" dropdown>
+                                <a class="dropdown-item aira-arrow" dropdownToggle href="javascript:void(0)">
+                                    <i class="icon-engines"></i> Engines</a>
+                                <ul *dropdownMenu>
+                                    <li><a routerLink="/phrase-cloud-generation" routerLinkActive="active">Phrase Cloud Generation</a></li>
+                                    <li><a routerLink="/machine-translation" routerLinkActive="active">Machine Translation</a></li>
+                                    <li><a routerLink="/ner" routerLinkActive="active">NER</a></li>
+                                    <li><a routerLink="/news-classification" routerLinkActive="active">News Classification</a></li>
+                                    <li><a routerLink="/sentiment-analysis" routerLinkActive="active">Sentiment Analysis</a></li>
+                                    <li><a routerLink="/summary-generation" routerLinkActive="active">Summary Generation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="nav_list">
+                                        <a href="javascript:void(0)"> <i class="icon-artificial-intelligence"></i> AutoML</a>
+                                    </li>
+                                    <li class="nav_list">
+                                        <a href="javascript:void(0)"><i class="icon-design"></i> Design Workflow</a>
+                                    </li>
+                                    <li class="nav_list">
+                                        <a routerLink="/patent-analysis" routerLinkActive="active"> <i class="icon-patent"></i> Patent Analysis</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item"><a routerLink="/my-work" class="nav-link">My Work</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">API Gateway</a></li>
+                </ul>
+                <div class="dropdown text-end user_details" dropdown>
+                    <a dropdownToggle href="javascript:void(0)" class="d-flex link-dark text-decoration-none aira-arrow align-items-center" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/images/User-icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <span class="current_user">
+                <span class="user_name">John Smith</span>
+                        <span class="user_bio">Admin</span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" *dropdownMenu>
+                        <li><a class="dropdown-item" href="javascript:void(0)">New project...</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Settings</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<div class="home_banner" style="background-image: url(./assets/images/home_banner.png);">
+    <div class="container">
+        <div class="home_banner_content">
+            <div class="home_banner_left"></div>
+            <div class="home_banner_right">
+                <h1>AIRA <span>(AI for Research & Analytics)</span></h1>
+                <h6>One-stop platform providing access to Evalueserve AI related use cases/models/algorithms</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                <div class="banner_btn">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home_section home_section1">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-4">
+                <div class="home_section1_col1_wrapper">
+                    <div class="icon"><img src="./assets/images/check-list.svg" alt=""></div>
+                    <h3>What we can do <span class="home_section1_title_text">AIRA</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col2_wrapper home_section1_col">
+                    <div class="home_section1_col_item">
+                        <img src="./assets/images/digital_products.png" alt="">
+                        <div class="image_caption">AI Enablement for Evalueserve Digital Products</div>
+                    </div>
+                    <div class="home_section1_col_item">
+                        <img src="./assets/images/AI_knowledge_hub.png" alt="">
+                        <div class="image_caption">AI Knowledge Hub</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col3_wrapper home_section1_col">
+                    <div class="home_section1_col_item">
+                        <img src="./assets/images/operation_empowerment.png" alt="">
+                        <div class="image_caption">Operation Empowerment</div>
+                    </div>
+                    <div class="home_section1_col_item">
+                        <img src="./assets/images/ecosystem_driven.png" alt="">
+                        <div class="image_caption">Ecosystem Driven</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section1_icon"><img src="./assets/images/home_section1_icon.svg" alt=""></div>
+    <div class="section1_icon2"><img src="./assets/images/home_section1_icon2.svg" alt=""></div>
+</div>
+<div class="home_section home_section2">
+    <div class="container">
+        <h3>The One-Stop Shop for AI <br>Tools at Evalueserve  <span class="home_section1_title_text">EVALUESERVE</span></h3>
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>Slide 1</ng-template>  
+            <ng-template carouselSlide>Slide 2</ng-template>  
+            <ng-template carouselSlide>Slide 3</ng-template>  
+            <ng-template carouselSlide>Slide 4</ng-template>  
+            <ng-template carouselSlide>Slide 5</ng-template>  
+          </owl-carousel-o>
+    </div>
+</div>
+<div class="home_section home_section3" style="background-image: url(./assets/images/success_stories_bg.png);">
+    <div class="container">
+        <h3>Success Stories <span class="home_section1_title_text">STORIES</span></h3>
+        <section class="story_slider">
+            <owl-carousel-o [options]="stories">
+                <ng-template carouselSlide>
+                    <div class="story_slider_item cursor-pointer">
+                        <div class="story">
+                            <div class="slide_name">Rob Renzi</div>
+                            <div class="slide_designation">Chief Executive Officer</div>
+                            <div class="slide_caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="story_slider_item cursor-pointer">
+                        <div class="story">
+                            <div class="slide_name">John Smith</div>
+                            <div class="slide_designation">Vice President (CaPS)</div>
+                            <div class="slide_caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="story_slider_item cursor-pointer">
+                        <div class="story">
+                            <div class="slide_name">James Sullivan</div>
+                            <div class="slide_designation">Chief Administrative Officer</div>
+                            <div class="slide_caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="story_slider_item cursor-pointer">
+                        <div class="story">
+                            <div class="slide_name">John Smith</div>
+                            <div class="slide_designation">Vice President (CaPS)</div>
+                            <div class="slide_caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                        </div>
+                    </div>
+                </ng-template>  
+            </owl-carousel-o>
+        </section>
+    </div>
+    <div class="home_section3_icon1">
+        <img src="./assets/images/home_story_icon1.svg" alt="">
+    </div>
+    <div class="home_section3_icon2">
+        <img src="./assets/images/home_story_icon2.svg" alt="">
+    </div>
+</div>
+<div class="home_section home_section4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="icon"><img src="./assets/images/easy-installation.svg" alt=""></span>
+                <h3>AIRA as Service  <span class="home_section1_title_text">SERVICE</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <div class="btn_wrapper">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="image_wrapper">
+                    <img src="./assets/images/home_service.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="home_section4_icon1"><img src="./assets/images/home_section4_icon1.svg" alt=""></span>
+    <span class="home_section4_icon2"><img src="./assets/images/home_section4_icon2.svg" alt=""></span>
+    <span class="home_section4_icon3"><img src="./assets/images/home_section4_icon3.svg" alt=""></span>
+    <span class="home_section4_icon4"><img src="./assets/images/home_section4_icon4.svg" alt=""></span>
+</div>
+<app-footer></app-footer> 
