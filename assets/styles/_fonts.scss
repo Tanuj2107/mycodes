@@ -1,0 +1,332 @@
+//Font Imports
+@include font-face("FSAlbert-Regular", "FSAlbert-Regular");
+@include font-face("FSAlbert-Bold", "FSAlbert-Bold");
+@include font-face("FSAlbert-Light", "FSAlbert-Light");
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot?lk2kqd');
+    src: url('../fonts/icons.eot?lk2kqd#iefix') format('embedded-opentype'), url('../fonts/icons.ttf?lk2kqd') format('truetype'), url('../fonts/icons.woff?lk2kqd') format('woff'), url('../fonts/icons.svg?lk2kqd#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'FSAlbert-ExtraBold';
+    src: url('../fonts/FSAlbert-ExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete:before {
+    content: "\e900";
+}
+
+.icon-save-files:before {
+    content: "\e901";
+}
+
+.icon-view:before {
+    content: "\e902";
+}
+
+.icon-expand:before {
+    content: "\e903";
+}
+
+.icon-collapse:before {
+    content: "\e904";
+}
+
+.icon-bookmark-filled:before {
+    content: "\e905";
+}
+
+.icon-folder-open:before {
+    content: "\e906";
+}
+
+.icon-folder-closed:before {
+    content: "\e907";
+}
+
+.icon-user-fill:before {
+    content: "\e908";
+}
+
+.icon-settings-fill:before {
+    content: "\e909";
+}
+
+.icon-star-fill:before {
+    content: "\e90a";
+}
+
+.icon-notifications-fIlled:before {
+    content: "\e90b";
+}
+
+.icon-filter-fIll:before {
+    content: "\e90c";
+}
+
+.icon-dashboard:before {
+    content: "\e90d";
+}
+
+.icon-s:before {
+    content: "\e90e";
+}
+
+.icon-features:before {
+    content: "\e90f";
+}
+
+.icon-add-folder:before {
+    content: "\e910";
+}
+
+.icon-comment:before {
+    content: "\e911";
+}
+
+.icon-dislike:before {
+    content: "\e912";
+}
+
+.icon-like:before {
+    content: "\e913";
+}
+
+.icon-bookmark:before {
+    content: "\e914";
+}
+
+.icon-setting:before {
+    content: "\e915";
+}
+
+.icon-info:before {
+    content: "\e916";
+}
+
+.icon-question-mark:before {
+    content: "\e917";
+}
+
+.icon-post-crm:before {
+    content: "\e918";
+}
+
+.icon-cross:before {
+    content: "\e919";
+}
+
+.icon-unsubscribe:before {
+    content: "\e91a";
+}
+
+.icon-tick:before {
+    content: "\e91b";
+}
+
+.icon-reset:before {
+    content: "\e91c";
+}
+
+.icon-publish:before {
+    content: "\e91d";
+}
+
+.icon-link:before {
+    content: "\e91e";
+}
+
+.icon-sort-icon:before {
+    content: "\e91f";
+}
+
+.icon-trending:before {
+    content: "\e920";
+}
+
+.icon-tick-circle:before {
+    content: "\e921";
+}
+
+.icon-user:before {
+    content: "\e922";
+}
+
+.icon-calendar:before {
+    content: "\e923";
+}
+
+.icon-Search-Icon:before {
+    content: "\e924";
+}
+
+.icon-add:before {
+    content: "\e925";
+}
+
+.icon-edit:before {
+    content: "\e926";
+}
+
+.icon-upload:before {
+    content: "\e927";
+}
+
+.icon-download:before {
+    content: "\e928";
+}
+
+.icon-share:before {
+    content: "\e929";
+}
+
+.icon-sort:before {
+    content: "\e92a";
+}
+
+.icon-logout:before {
+    content: "\e92b";
+}
+
+.icon-my-profile:before {
+    content: "\e92c";
+}
+
+.icon-reset-password:before {
+    content: "\e92d";
+}
+
+.icon-notifications-fill:before {
+    content: "\e92e";
+}
+
+.icon-search-icon-1:before {
+    content: "\e92f";
+}
+
+.icon-search-icon:before {
+    content: "\e930";
+}
+
+.icon-menu:before {
+    content: "\e931";
+}
+
+.icon-teamwork:before {
+    content: "\e932";
+}
+
+.icon-man-user:before {
+    content: "\e933";
+}
+
+.icon-location:before {
+    content: "\e934";
+}
+
+.icon-test:before {
+    content: "\e935";
+}
+
+.icon-copy-1:before {
+    content: "\e936";
+}
+
+.icon-save:before {
+    content: "\e937";
+}
+
+.icon-arrow:before {
+    content: "\e938";
+}
+
+.icon-delete-icon:before {
+    content: "\e939";
+}
+
+.icon-sort-1:before {
+    content: "\e93a";
+}
+
+.icon-more:before {
+    content: "\e93b";
+}
+
+.icon-search:before {
+    content: "\e93c";
+}
+
+.icon-patent:before {
+    content: "\e93d";
+}
+
+.icon-engines:before {
+    content: "\e93e";
+}
+
+.icon-design:before {
+    content: "\e93f";
+}
+
+.icon-artificial-intelligence:before {
+    content: "\e940";
+}
+
+.icon-xlsx-file-format:before {
+    content: "\e941";
+}
+
+.icon-cancel:before {
+    content: "\e942";
+}
+
+.icon-cloud-computing:before {
+    content: "\e943";
+}
+
+.icon-copy:before {
+    content: "\e944";
+    color: #fff;
+}
+
+.icon-icon-1 .path1:before {
+    content: "\e945";
+    color: rgb(170, 159, 198);
+}
+
+.icon-icon-1 .path2:before {
+    content: "\e946";
+    margin-left: -1em;
+    color: rgb(241, 98, 128);
+}
+
+.icon-icon-1 .path3:before {
+    content: "\e947";
+    margin-left: -1em;
+    color: rgb(243, 242, 244);
+}
+
+.icon-icon-2:before {
+    content: "\e948";
+}
+
+.icon-icon-3:before {
+    content: "\e949";
+}
